@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 // --- useInView hook ---
 function useInView(threshold = 0.15) {
@@ -165,7 +166,7 @@ function Hero() {
         <div className="hero-image-col" style={{ position: 'relative', display: 'flex', justifyContent: 'center', opacity: loaded ? 1 : 0, transform: loaded ? 'translateX(0)' : 'translateX(60px)', transition: 'all 1s ease 0.4s' }}>
           <div style={{ position: 'absolute', top: '10%', left: '50%', transform: 'translateX(-50%)', width: 380, height: 380, borderRadius: '50%', background: 'radial-gradient(circle, rgba(6,182,212,0.25) 0%, rgba(37,99,235,0.15) 50%, transparent 70%)', filter: 'blur(40px)' }} />
           <div style={{ position: 'relative', zIndex: 1, borderRadius: 24, overflow: 'hidden', width: 'min(400px, 90vw)', aspectRatio: '3/4', boxShadow: '0 40px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(6,182,212,0.2)' }}>
-            <img src="/arpita.jpg" alt="Arpita Raksit – Lead Consultant, TNF Global Bangladesh" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+            <Image src="/arpita.jpg" alt="Arpita Raksit – Lead Consultant, TNF Global Bangladesh" fill style={{ objectFit: 'cover', objectPosition: 'top' }} />
             <div style={{ position: 'absolute', bottom: 20, left: 20, right: 20, background: 'rgba(8,20,58,0.85)', backdropFilter: 'blur(12px)', borderRadius: 14, padding: '14px 18px', border: '1px solid rgba(6,182,212,0.25)' }}>
               <p style={{ fontFamily: "'DM Serif Display', Georgia, serif", color: '#fff', fontSize: 17, fontWeight: 700, marginBottom: 3 }}>Arpita Raksit</p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#06B6D4', fontSize: 13, fontWeight: 500 }}>Lead Consultant · TNF Global Bangladesh</p>
@@ -238,7 +239,7 @@ function About() {
       <div className="about-grid" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 80, alignItems: 'center' }}>
         <Reveal>
           <div style={{ position: 'relative', borderRadius: 24, overflow: 'hidden', aspectRatio: '3/4', maxWidth: 360, boxShadow: '0 40px 80px rgba(0,0,0,0.4)' }}>
-            <img src="/arpita.jpg" alt="Arpita Raksit" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+            <Image src="/arpita.jpg" alt="Arpita Raksit" fill style={{ objectFit: 'cover', objectPosition: 'top' }} />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(8,20,58,0.7) 0%, transparent 50%)' }} />
           </div>
         </Reveal>
